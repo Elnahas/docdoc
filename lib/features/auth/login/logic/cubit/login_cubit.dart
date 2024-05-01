@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_advanced_omar_ahmed/features/login/data/models/login_request_body.dart';
+import 'package:flutter_advanced_omar_ahmed/features/auth/login/data/models/login_request_body.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:flutter_advanced_omar_ahmed/features/login/data/repos/login_repo.dart';
+import 'package:flutter_advanced_omar_ahmed/features/auth/login/data/repos/login_repo.dart';
 
-import 'package:flutter_advanced_omar_ahmed/features/login/logic/cubit/login_state.dart';
+import 'package:flutter_advanced_omar_ahmed/features/auth/login/logic/cubit/login_state.dart';
 
 
 class LoginCubit extends Cubit<LoginState> {
