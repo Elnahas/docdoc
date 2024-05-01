@@ -1,9 +1,9 @@
 import 'package:flutter_advanced_omar_ahmed/core/networking/api_error_handler.dart';
 import 'package:flutter_advanced_omar_ahmed/core/networking/api_result.dart';
-import 'package:flutter_advanced_omar_ahmed/features/login/data/models/login_request_body.dart';
-import 'package:flutter_advanced_omar_ahmed/features/login/data/models/login_response.dart';
+import 'package:flutter_advanced_omar_ahmed/features/auth/login/data/models/login_request_body.dart';
+import 'package:flutter_advanced_omar_ahmed/features/auth/login/data/models/login_response.dart';
 
-import '../../../../core/networking/api_service.dart';
+import '../../../../../core/networking/api_service.dart';
 
 class LoginRepo {
   final ApiService _apiService;
