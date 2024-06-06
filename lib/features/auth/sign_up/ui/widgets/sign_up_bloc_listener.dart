@@ -8,7 +8,6 @@ import '../../../../../core/routing/routes.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 
-
 class SignupBlocListener extends StatelessWidget {
   const SignupBlocListener({super.key});
 
@@ -52,22 +51,22 @@ class SignupBlocListener extends StatelessWidget {
           title: const Text('Signup Successful'),
           content: const SingleChildScrollView(
             child: ListBody(
-              children: <Widget>[
+              children: [
                 Text('Congratulations, you have signed up successfully!'),
               ],
             ),
           ),
           actions: <Widget>[
             TextButton(
-              child: const Text('Continue'),
               style: TextButton.styleFrom(
-                primary: Colors.white,
+                foregroundColor: Colors.white,
                 backgroundColor: Colors.blue,
-                onSurface: Colors.grey,
+                disabledForegroundColor: Colors.grey.withOpacity(0.38),
               ),
               onPressed: () {
                 context.pushNamed(Routes.loginScreen);
               },
+              child: const Text('Continue'),
             ),
           ],
         );
