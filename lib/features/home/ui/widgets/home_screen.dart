@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_advanced_omar_ahmed/core/helpers/spacing.dart';
 import 'package:flutter_advanced_omar_ahmed/features/home/ui/widgets/doctors_blue_container.dart';
-import 'package:flutter_advanced_omar_ahmed/features/home/ui/widgets/doctors_list_view.dart';
-import 'package:flutter_advanced_omar_ahmed/features/home/ui/widgets/doctors_speciality_list_view.dart';
 import 'package:flutter_advanced_omar_ahmed/features/home/ui/widgets/doctors_speciality_see_all.dart';
 import 'package:flutter_advanced_omar_ahmed/features/home/ui/widgets/home_top_bar.dart';
+import 'package:flutter_advanced_omar_ahmed/features/home/ui/widgets/specializations_and_doctors_bloc_builder.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -25,9 +23,8 @@ class HomeScreen extends StatelessWidget {
             const DoctorsBlueContainer(),
             verticalSpace(24),
             const DoctorsSpecialitySeeAll(),
-            const DoctorsSpecialityListView(),
-            verticalSpace(8),
-            const DoctorsListView(),
+            verticalSpace(18),
+            const SpecializationsAndDoctorsBlocBuilder()
           ],
         ),
       )),

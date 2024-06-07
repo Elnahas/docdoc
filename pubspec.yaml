@@ -65,6 +65,8 @@ dependencies:
   # A build system for Dart code generation and modular compilation.
   build_runner: ^2.4.9
 
+  cached_network_image: ^3.3.1
+
 
 
 
