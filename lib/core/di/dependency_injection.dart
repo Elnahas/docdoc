@@ -6,7 +6,11 @@ import 'package:flutter_advanced_omar_ahmed/features/auth/login/data/repos/login
 import 'package:flutter_advanced_omar_ahmed/features/auth/login/logic/cubit/login_cubit.dart';
 import 'package:flutter_advanced_omar_ahmed/features/auth/sign_up/data/repos/sign_up_repo.dart';
 import 'package:flutter_advanced_omar_ahmed/features/auth/sign_up/logic/cubit/sign_up_cubit.dart';
+import 'package:flutter_advanced_omar_ahmed/features/home/data/apis/home_api_service.dart';
 import 'package:get_it/get_it.dart';
+
+import '../../features/home/data/repos/home_repo.dart';
+import '../../features/home/logic/home_cubit.dart';
 
 final getit = GetIt.instance;
 
@@ -22,5 +26,11 @@ Future<void> setupGetIt() async{
   //SignUp
   getit.registerLazySingleton<SignupRepo>(()=> SignupRepo(getit()));
   getit.registerFactory<SignupCubit>(() => SignupCubit(getit()));
+
+  //home
+  getit.registerLazySingleton<HomeApiService>(() => HomeApiService(dio));
+  getit.registerLazySingleton<HomeRepo>(()=> HomeRepo(getit()));
+  //getit.registerFactory<HomeCubit>(() => HomeCubit(getit()));
+
 
 }

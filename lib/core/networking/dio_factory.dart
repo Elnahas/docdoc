@@ -7,7 +7,7 @@ class DioFactory {
 
   static Dio? dio;
 
-  static  Dio getDio() {
+  static Dio getDio() {
     Duration timeOut = const Duration(seconds: 30);
 
     if (dio == null) {
@@ -15,11 +15,19 @@ class DioFactory {
       dio!
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
+      addDioHeaders();
       addDioInterceptor();
       return dio!;
     } else {
       return dio!;
     }
+  }
+
+  static void addDioHeaders() {
+    dio?.options.headers = {
+      'Accept': 'application/json',
+      'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzE3NzgzOTIxLCJleHAiOjE3MTc3ODc1MjEsIm5iZiI6MTcxNzc4MzkyMSwianRpIjoiaE12a0N4T2l0VmplMVVPcSIsInN1YiI6IjEwOTIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.g_o_aBlc3DasJ41Wd9ZC251ceilmyBi3x1GDdSx_F8Q',
+    };
   }
 
   static void addDioInterceptor() {
