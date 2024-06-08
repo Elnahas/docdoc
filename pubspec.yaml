@@ -66,6 +66,7 @@ dependencies:
   build_runner: ^2.4.9
 
   cached_network_image: ^3.3.1
+  shared_preferences: ^2.2.3
 
 
 

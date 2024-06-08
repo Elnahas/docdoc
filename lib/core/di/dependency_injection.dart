@@ -8,9 +8,7 @@ import 'package:flutter_advanced_omar_ahmed/features/auth/sign_up/data/repos/sig
 import 'package:flutter_advanced_omar_ahmed/features/auth/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:flutter_advanced_omar_ahmed/features/home/data/apis/home_api_service.dart';
 import 'package:get_it/get_it.dart';
-
 import '../../features/home/data/repos/home_repo.dart';
-import '../../features/home/logic/home_cubit.dart';
 
 final getit = GetIt.instance;
 
